@@ -39,6 +39,11 @@ var session=require('koa-session');
 var bodyParser=require('koa-bodyparser');
 var app=koa();
 
+/*
+* 设置签名的 Cookie 密钥。
+ 这些被传递给 KeyGrip，但是你也可以传递你自己的 KeyGrip 实例。
+* */
+app.keys=['zhangjing']
 app.use(logger());
 app.use(session(app));
 app.use(bodyParser());

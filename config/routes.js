@@ -18,6 +18,8 @@ module.exports=function () {
     //app
     router.post('signature',App.hasBody,App.hasToken,App.signature);
 
+    //creations
+    router.get('')
 
     return router;
 }
